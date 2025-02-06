@@ -1,5 +1,3 @@
-NORMALIZED_MILEAGE = 10000
-
 # Load the trained thetas, if not trained it should be at 0, meaning no prediction can be made
 def load_thetas():
     try:
@@ -17,7 +15,7 @@ def predict_price(mileage, theta0, theta1):
 if __name__ == "__main__":
     try:
         theta0, theta1 = load_thetas()
-        mileage = float(input("Enter mileage: ")) / NORMALIZED_MILEAGE
+        mileage = float(input("Enter mileage: "))
         estimated_price = predict_price(mileage, theta0, theta1)
         print(f"Estimated Price: {estimated_price}")
     except Exception as e:
